@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block headder %} CreatePosts {% endblock %}
+{% block body %} 
+ <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+    <form method="POST" enctype="multipart/form-data" name="text"> 
+  
+        <!-- Security token -->
+        {% csrf_token %} 
+      
+        <!-- Using the formset -->
+        {{form|crispy}} 
+          
+        <input type="submit" value="โพสต์ข้อความ" > 
+    </form> 
+    </div>
+{% endblock%}
