@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+	{% load static %}
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{% block headder %} {% endblock %}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+
+
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet"
+	>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'asset/css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'asset/css/icomoon.css' %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'asset/css/bootstrap.css' %}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static 'asset/css/magnific-popup.css' %}">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{% static 'asset/css/flexslider.css' %}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{% static 'asset/css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'asset/css/owl.theme.default.min.css' %}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static 'asset/css/style.css' %}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'asset/js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container-wrap">
+			<div class="top-menu">
+				<div class="row ">
+					<div class="col-md-12 col-offset-0 text-center">
+						<div id="fh5co-logo">
+							<img src=" {% static 'asset/images/LogoMakr-279dP6.png' %}"  width="450 " height="150">
+							<!-- <a href="home.html" >Mo Mo Talk</a> -->
+							<!-- <img src="https://www.w3schools.com/images/lamp.jpg" alt="Lamp" width="32" height="32"> -->
+					</div>
+					</div>
+					<div class="col-md-12 col-md-offset-0 text-center menu-1">
+						<ul>
+							<li class="active"><a href="{% url 'home' %}">หน้าแรก</a></li>
+							<li><a href="{% url 'createposts' %}">สร้างโพสต์</a></li>
+							<li class="has-dropdown">
+								<a href="#">หมวดหมู่</a>
+								<ul class="dropdown">
+									<li><a href="{% url 'general' %}">ทั่วไป</a></li>
+									<li><a href="{% url 'love' %}">ความรัก</a></li>
+									<li><a href="{% url 'consult' %}">ปรึกษา</a></li>
+									<li><a href="{% url 'learning' %}">การเรียน</a></li>
+								</ul>
+							</li>
+							<li><a href="{% url 'home' %}">index</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#" class="donate">Donate</a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+    </nav>
+	<div class="container-wrap">
+		{% include 'messages.html' %}
+        <div class="row animate-box" >
+			{% block body %} 
+			{% endblock%}
+        </div>
+        
+	</div>
+
+   
+	<!-- jQuery -->
+	<script src="{% static 'asset/js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'asset/js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'asset/js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'asset/js/jquery.waypoints.min.js' %}"></script>
+	<!-- Flexslider -->
+	<script src="{% static 'asset/js/jquery.flexslider-min.js' %}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'asset/js/owl.carousel.min.js' %}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static 'asset/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'asset/js/magnific-popup-options.js' %}"></script>
+	<!-- Counters -->
+	<script src="{% static 'asset/js/jquery.countTo.js' %}"></script>
+	<!-- Main -->
+	<script src="{% static 'asset/js/main.js' %}"></script>
+	<script>
+	settimeout(function(){
+		if ($('#msg').length > 0){
+			$('#msg').remove();
+		}
+	},2000)
+	 </script>
+
+	</body>
+</html>
+
